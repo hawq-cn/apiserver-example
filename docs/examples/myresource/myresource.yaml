@@ -1,0 +1,7 @@
+note: MyResource Example
+sample: |
+  apiVersion: core.hawq.org/v1alpha1
+  kind: MyResource
+  metadata:
+    name: myresource-example
+  spec:
