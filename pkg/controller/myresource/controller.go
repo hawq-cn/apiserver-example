@@ -61,7 +61,7 @@ func (c *MyResourceControllerImpl) Init(arguments sharedinformers.ControllerInit
 // Reconcile handles enqueued messages
 func (c *MyResourceControllerImpl) Reconcile(u *v1alpha1.MyResource) error {
 	// Implement controller logic here
-	log.Printf("Running reconcile MyResource for %s\n", u.Name)
+	log.Printf("I am generated reconcile handler, resource name: %s\n", u.Name)
 	return nil
 }
 
