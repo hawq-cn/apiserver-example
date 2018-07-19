@@ -121,7 +121,15 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 			Schema: spec.Schema{
 				SchemaProps: spec.SchemaProps{
 					Description: "MyResourceSpec defines the desired state of MyResource",
-					Properties:  map[string]spec.Schema{},
+					Properties: map[string]spec.Schema{
+						"needs": {
+							SchemaProps: spec.SchemaProps{
+								Type:   []string{"integer"},
+								Format: "int32",
+							},
+						},
+					},
+					Required: []string{"needs"},
 				},
 			},
 			Dependencies: []string{},
@@ -130,7 +138,15 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 			Schema: spec.Schema{
 				SchemaProps: spec.SchemaProps{
 					Description: "MyResourceStatus defines the observed state of MyResource",
-					Properties:  map[string]spec.Schema{},
+					Properties: map[string]spec.Schema{
+						"alloc": {
+							SchemaProps: spec.SchemaProps{
+								Type:   []string{"integer"},
+								Format: "int32",
+							},
+						},
+					},
+					Required: []string{"alloc"},
 				},
 			},
 			Dependencies: []string{},

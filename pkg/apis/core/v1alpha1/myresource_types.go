@@ -34,10 +34,12 @@ type MyResource struct {
 
 // MyResourceSpec defines the desired state of MyResource
 type MyResourceSpec struct {
+	Needs int32 `json:"needs"`
 }
 
 // MyResourceStatus defines the observed state of MyResource
 type MyResourceStatus struct {
+	Alloc int32 `json:"alloc"`
 }
 
 // Validate checks that an instance of MyResource is well formed

@@ -79,9 +79,11 @@ type MyResource struct {
 }
 
 type MyResourceSpec struct {
+	Needs int32
 }
 
 type MyResourceStatus struct {
+	Alloc int32
 }
 
 //

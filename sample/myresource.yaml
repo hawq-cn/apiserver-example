@@ -3,3 +3,4 @@ kind: MyResource
 metadata:
   name: myresource-example
 spec:
+  needs: 12

@@ -93,6 +93,7 @@ func Convert_core_MyResourceList_To_v1alpha1_MyResourceList(in *core.MyResourceL
 }
 
 func autoConvert_v1alpha1_MyResourceSpec_To_core_MyResourceSpec(in *MyResourceSpec, out *core.MyResourceSpec, s conversion.Scope) error {
+	out.Needs = in.Needs
 	return nil
 }
 
@@ -102,6 +103,7 @@ func Convert_v1alpha1_MyResourceSpec_To_core_MyResourceSpec(in *MyResourceSpec, 
 }
 
 func autoConvert_core_MyResourceSpec_To_v1alpha1_MyResourceSpec(in *core.MyResourceSpec, out *MyResourceSpec, s conversion.Scope) error {
+	out.Needs = in.Needs
 	return nil
 }
 
@@ -111,6 +113,7 @@ func Convert_core_MyResourceSpec_To_v1alpha1_MyResourceSpec(in *core.MyResourceS
 }
 
 func autoConvert_v1alpha1_MyResourceStatus_To_core_MyResourceStatus(in *MyResourceStatus, out *core.MyResourceStatus, s conversion.Scope) error {
+	out.Alloc = in.Alloc
 	return nil
 }
 
@@ -120,6 +123,7 @@ func Convert_v1alpha1_MyResourceStatus_To_core_MyResourceStatus(in *MyResourceSt
 }
 
 func autoConvert_core_MyResourceStatus_To_v1alpha1_MyResourceStatus(in *core.MyResourceStatus, out *MyResourceStatus, s conversion.Scope) error {
+	out.Alloc = in.Alloc
 	return nil
 }
 
